@@ -26,9 +26,11 @@ public class SortedListTest {
 	 * 
 	 * If you are testing with primitives, remember the output from the list is
 	 * an Object, so you need to either cast the output back to a primitive, or
-	 * wrap the expected value up as an Object. For example: assertEquals(new
-	 * Integer(1), list.get(0)); or, alternatively, assertEquals(1, (int)
-	 * list.get(0));
+	 * wrap the expected value up as an Object. 
+	 * For example: 
+	 * assertEquals(new Integer(1), list.get(0));
+	 * or, alternatively,
+	 * assertEquals(1, (int) list.get(0));
 	 */
 	@Test
 	public void testAddS() {

@@ -23,6 +23,7 @@ public class SortedList<S extends Comparable<S>> extends ListTTH<S> implements
 	 */
 	@Override
 	public void add(int position, S value) {
+		// Don't change this add method.  Implement the one below.
 		throw new UnsupportedOperationException();
 	}
 
@@ -34,13 +35,18 @@ public class SortedList<S extends Comparable<S>> extends ListTTH<S> implements
 	 * insertion point. You will need to use compareTo. If you're not sure how
 	 * it works, check the API.
 	 * 
-	 * Next, move on to implementing an Iterator for the list (below the add method).
+	 * Next, move on to implementing an Iterator for the list (below the add
+	 * method).
 	 * 
 	 * After that, improve your add algorithm by considering that we are always
 	 * inserting into a sorted list. Think back on algorithms we've seen that
 	 * could help you *cough* conquer this problem.
 	 * 
-	 * You will receive partial credit for the simpler linear search method.
+	 * Hint: objects have two special "namespaces" available to them:
+	 * one for their own methods and attributes, and another distinct namespace
+	 * for their superclass's methods and attributes. You already know how to
+	 * access these namespaces. Think about the special keywords you've been
+	 * using in constructors.
 	 */
 	@Override
 	public void add(S value) {
@@ -48,9 +54,19 @@ public class SortedList<S extends Comparable<S>> extends ListTTH<S> implements
 	}
 
 	/*
-	 * Implement an Iterator for our list so users can use more convenient
-	 * forEach loops. Use Eclipse to help you auto-generate the necessary
-	 * methods. Refer to the Iterator API as well.
+	 * Implement an Iterator for our list. This lets users of our list use the
+	 * more succinct for loop syntax -- for (Object o : objects){...}. More
+	 * specifically, it allows use of a forEach loop:
+	 * (https://docs.oracle.com/javase
+	 * /8/docs/technotes/guides/language/foreach.html) This is a function which
+	 * takes a function as a parameter!
+	 * 
+	 * Let Eclipse to help you auto-generate the necessary methods for
+	 * implementing the Iterable interface, and creating an Iterator object.
+	 * Refer to the Iterator API as well.
+	 * 
+	 * Hint: Even though Iterator is an Interface, you can create an Iterator
+	 * object AND implement its methods using an "anonymous class"
 	 * 
 	 * You do not have to account for a user modifying the list after the
 	 * Iterator has been created. We can simply say that this results in
