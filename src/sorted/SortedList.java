@@ -1,3 +1,12 @@
+/**
+* Names:
+* Jeffrey Moe
+* Robert Miller
+* Micheal Watkins
+* CS 111-003
+*/
+
+
 package sorted;
 
 import java.util.Iterator;
