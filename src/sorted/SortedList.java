@@ -50,7 +50,28 @@ public class SortedList<S extends Comparable<S>> extends ListTTH<S> implements
 	 */
 	@Override
 	public void add(S value) {
+		
+		if(super.isFull()){
+			super.remove(getMaxSize());
+			super.add(value);
+		}
+		
+		
+		for(int i = 0; i < super.size(); i++){
+			if(super.get(i) == null){
+				super.add(value);
+			}
+		}
+	}
 
+	public static void main(String[] args){
+		
+	}
+	
+	@Override
+	public Iterator<S> iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	/*
